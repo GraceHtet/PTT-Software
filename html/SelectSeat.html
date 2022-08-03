@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select Seat</title>
+<!--    Bootstrap & fontawesome-->
+    <link rel="stylesheet" href="../assents/libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assents/libs/fontawesome-icon/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<section class="container-fluid px-5 bg-primary">
+    <div class="d-flex align-items-center justify-content-between">
+        <div class="my-2">
+            <img src="../assents/images/logo.png" alt="Logo Image" class="logo-img" />
+        </div>
+        <div class="nav-left d-flex align-items-center justify-content-between">
+            <a href="#" class="px-1 text-decoration-none text-light">Home</a>
+            <p class="mb-0 text-light">|</p>
+            <a href="#" class="px-1 text-decoration-none text-white-50">Operators</a>
+        </div>
+    </div>
+</section>
+
+<section class="container my-3">
+    <div class="container-fluid">
+
+        <div class="row d-flex align-items-center">
+            <div class="col-12 col-12 col-md-12 col-lg-6 col-xl-6 py-2">
+                <h3 class="text-center">Line Name(Select Seat)</h3>
+                <div class="b-shadows bg-light rounded-2 py-2">
+                    <p class="px-2">Time: 00:00 AM/PM</p>
+                    <p class="bg-gray m-3 p-2 text-center rounded-2"><b>Driver</b></p>
+                    <div class="px-5" id="seats"></div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="infos mb-3 py-3 rounded-2">
+                    <h3 class="text-center pb-2">Information</h3>
+
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30 pe-1">Line Name</p>
+                        <p class="w-70">Myat Mandalar Tun</p>
+                    </div>
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">Route</p>
+                        <p class="w-70">Yangon -> Mandalay</p>
+                    </div>
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">Date</p>
+                        <p class="w-70">dd-mm-yy</p>
+                    </div>
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">Time</p>
+                        <p class="w-70">Selected Time</p>
+                    </div>
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">Duration</p>
+                        <p class="w-70">00:00 Hours</p>
+                    </div>
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">Price</p>
+                        <p class="w-70">20000 MMK</p>
+                    </div>
+                </div>
+
+                <form class="p-infos py-3 rounded-2" action="" method="post" enctype="multipart/form-data">
+                    <h3 class="text-center pb-2">Pessanger Information</h3>
+
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">Name</p>
+                        <input type="text" name="username" id="username" class="w-70 border-0 selecters"
+                               placeholder="Enter Your Name" value="" required/>
+                    </div>
+                    <div class="px-3">
+                        <span class="">Gender</span>
+                        <div class=" mx-3">
+                            <input type="radio" name="gender" id="mgender" value="male"/> <span class="me-3">Male</span>
+                            <input type="radio" name="gender" id="fgender" value="female"/> <span class="me-3">Female</span>
+                            <input type="radio" name="gender" id="ogender" value="other"/> <span class="me-3">Other</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">NRC</p>
+                        <input type="text" name="NRC" id="NRC" class="w-70 border-0 selecters"
+                               placeholder="12/PaKhaKa(N)123456" required />
+                    </div>
+
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">Phone No</p>
+                        <input type="text" name="phone-no" id="phone_no" class="w-70 border-0 selecters"
+                               placeholder="0978948687" required />
+
+                    </div>
+
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">Email</p>
+                        <input type="email" name="email" id="email" class="w-70 border-0 selecters"
+                               placeholder="example@gmail.com"/>
+
+                    </div>
+
+
+                    <div class="d-flex align-items-center px-3">
+                        <p class="w-30">Seat No</p>
+                        <span class="" id="seat_no">00</span>
+                    </div>
+
+                    <label class="mx-3">Payment</label>
+
+                    <div class="payments d-flex align-items-center mx-3">
+                        <div class="w-100 px-3">
+                            <input type="radio" name="payment" id="kpay" value="kpay" />
+                            <img src="../assents/images/payments/kpayLogo.svg" alt="Kpay Logo" class="pay-logo bg-transparent">
+                            <span class="d-block px-3">Kpay</span>
+                        </div>
+                        <div class="w-100 px-3">
+                            <input type="radio" name="payment" id="wavepay" value="wavepay" />
+                            <img src="../assents/images/payments/wave_money.svg" alt="Wavepay Logo" class="pay-logo bg-transparent">
+                            <span class="d-block px-3">Wave Pay</span>
+                        </div>
+                    </div>
+
+                    <div class="mx-4 text-end">
+                        <input type="submit" name="" class="btn btn-primary me-0" id="" value="Book Now"/>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-primary footer text-center">
+    <p class="text-white-50">&copy; 2023 Travel Ticket Pick Design By TS Group</p>
+</section>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

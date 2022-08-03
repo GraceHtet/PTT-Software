@@ -1,0 +1,159 @@
+:root{
+    --bg-gray: #d4d4d4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg-gray{
+    background: var(--bg-gray);
+}
+p{
+    margin: 0;
+    padding: 5px 0;
+}
+.w-30{
+    width: 30%;
+}
+.w-70{
+    width: 70%;
+}
+
+.nav-left a{
+    font-size: 20px;
+}
+.logo-img{
+    width: 20%;
+}
+.seats_no a{
+    color: #000;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    font-weight: bold;
+}
+.seats_no a:hover{
+    background: green;
+    color: #fff;
+}
+.seat-box {
+    display: inline-block;
+    text-align: center;
+    line-height: 3;
+    border-radius: 10px;
+}
+.selecters:focus-visible {
+    outline: none;
+}
+.w-60px{
+    width: 60px;
+}
+.infos,
+.p-infos,
+.b-shadows{
+    box-shadow: 1px 1px 10px 1px #d5d5d5;
+}
+.infos h3,
+.p-infos h3{
+    position: relative;
+}
+.infos h3:after,
+.p-infos h3:after{
+    content: '';
+    height: 3px;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.infos h3:after{
+    width: 25%;
+}
+.p-infos h3:after{
+    width: 50%;
+}
+
+.infos p:nth-of-type(1):after,
+.p-infos p:nth-of-type(1):after{
+    position: relative;
+}
+.infos p:nth-of-type(1):after,
+.p-infos p:nth-of-type(1):after{
+    content: ':';
+    position: absolute;
+    transform: translateX(5px);
+}
+td input.selecters{
+    width: 100%;
+    line-height: 1 !important;
+    height: 10vh !important;
+}
+.pay-logo{
+    width: 20%;
+}
+
+/*Media Screen*/
+@media (max-width: 1200px) {
+    .infos h3:after{
+        width: 30%;
+    }
+    .p-infos h3:after{
+        width: 60%;
+    }
+    .seats_no a{
+        width: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .infos h3:after{
+        width: 20%;
+    }
+    .p-infos h3:after{
+        width: 35%;
+    }
+}
+
+@media (max-width: 765px) {
+    .infos h3:after{
+        width: 30%;
+    }
+    .p-infos h3:after{
+        width: 40%;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-img{
+        width: 40%;
+    }
+    .nav-left a{
+        font-size: 14px;
+    }
+    .seats_no a {
+        width: 40px;
+        height: 30px;
+        line-height: 2;
+        /*font-size: 15px;*/
+        font-weight: 400;
+    }
+    table{
+        margin: 0 10px!important;
+    }
+    .infos h3,
+    .p-infos h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+    .infos h3:after{
+        width: 26%;
+    }
+    .p-infos h3:after{
+        width: 50%;
+    }
+
+}

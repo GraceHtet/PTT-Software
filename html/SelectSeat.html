@@ -26,20 +26,20 @@
     </div>
 </section>
 
-<section class="container my-3">
+<section class="container">
     <div class="container-fluid">
 
-        <div class="row d-flex align-items-center">
-            <div class="col-12 col-12 col-md-12 col-lg-6 col-xl-6 py-2">
-                <h3 class="text-center">Line Name(Select Seat)</h3>
+        <div class="row d-flex align-items-center my-3">
+            <div class="op-left col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 py-2">
+                <h3 class="text-center mb-3">Line Name(Select Seat)</h3>
                 <div class="b-shadows bg-light rounded-2 py-2">
                     <p class="px-2">Time: 00:00 AM/PM</p>
                     <p class="bg-gray m-3 p-2 text-center rounded-2"><b>Driver</b></p>
-                    <div class="px-5" id="seats"></div>
+                    <div class="px-5 pb-3" id="seats"></div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="col-12 col-md-12 col-lg-6  col-xl-6 col-xxl-6 py-2">
                 <div class="infos mb-3 py-3 rounded-2">
                     <h3 class="text-center pb-2">Information</h3>
 
@@ -69,7 +69,7 @@
                     </div>
                 </div>
 
-                <form class="p-infos py-3 rounded-2" action="" method="post" enctype="multipart/form-data">
+                <form class="p-infos py-3 rounded-2" action="payment.html" method="post" enctype="multipart/form-data">
                     <h3 class="text-center pb-2">Pessanger Information</h3>
 
                     <div class="d-flex align-items-center px-3">
@@ -115,15 +115,15 @@
                     <label class="mx-3">Payment</label>
 
                     <div class="payments d-flex align-items-center mx-3">
-                        <div class="w-100 px-3">
+                        <div class="d-flex align-items-center px-3">
                             <input type="radio" name="payment" id="kpay" value="kpay" />
-                            <img src="../assents/images/payments/kpayLogo.svg" alt="Kpay Logo" class="pay-logo bg-transparent">
-                            <span class="d-block px-3">Kpay</span>
+                            <img src="../assents/images/payments/kpayLogo.svg" alt="Kpay Logo" class="pay-logo p-2 bg-transparent">
+                            <span class="pay-text">Kpay</span>
                         </div>
-                        <div class="w-100 px-3">
+                        <div class="d-flex align-items-center px-3">
                             <input type="radio" name="payment" id="wavepay" value="wavepay" />
-                            <img src="../assents/images/payments/wave_money.svg" alt="Wavepay Logo" class="pay-logo bg-transparent">
-                            <span class="d-block px-3">Wave Pay</span>
+                            <img src="../assents/images/payments/wave_money.svg" alt="Wavepay Logo" class="pay-logo p-2 bg-transparent">
+                            <span class="pay-text">Wave Pay</span>
                         </div>
                     </div>
 
@@ -138,7 +138,7 @@
     </div>
 </section>
 
-<section class="container-fluid bg-primary footer text-center">
+<section class="bg-primary footer d-flex justify-content-center align-items-center text-center">
     <p class="text-white-50">&copy; 2023 Travel Ticket Pick Design By TS Group</p>
 </section>
 

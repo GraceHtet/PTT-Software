@@ -18,3 +18,9 @@ while (i<10){
     `;
     i++;
 }
+
+// Jquery From MaThiri
+console.log('hi');
+$(document).ready(function(){
+    console.log("eyy");
+})

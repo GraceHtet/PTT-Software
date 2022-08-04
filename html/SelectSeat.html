@@ -9,76 +9,82 @@
 <!--    Bootstrap & fontawesome-->
     <link rel="stylesheet" href="../assents/libs/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../assents/libs/fontawesome-icon/css/all.min.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
 </head>
 <body>
 
 <section class="container-fluid px-5 bg-primary">
-    <div class="d-flex align-items-center justify-content-between">
-        <div class="my-2">
-            <img src="../assents/images/logo.png" alt="Logo Image" class="logo-img" />
+    <nav class="navbar sticky-top d-flex justify-content-between align-items-center px-5 top-navbars">
+        <div class="d-flex align-items-center">
+            <a href="#" class="navbar-brand"><img src="../assents/images/logoandbg/ts_logo.svg" class="logoimgs" alt="logo"/></a>
+            <a href="#" class="navbar-brand logonames"><span class="mainheaders">Ticket Hub</span><br/><span class="subheaders">Ticket Sale Service</span></a>
         </div>
-        <div class="nav-left d-flex align-items-center justify-content-between">
-            <a href="#" class="px-1 text-decoration-none text-light">Home</a>
-            <p class="mb-0 text-light">|</p>
-            <a href="#" class="px-1 text-decoration-none text-white-50">Operators</a>
+
+        <div>
+            <ul class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="../index.html" class="text-black">Home</a></li>
+                <li class="breadcrumb-item active">Operators</li>
+            </ul>
         </div>
-    </div>
+    </nav>
 </section>
 
 <section class="container">
     <div class="container-fluid">
 
-        <div class="row d-flex align-items-center my-3">
-            <div class="op-left col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 py-2">
+        <div class="row d-flex justify-content-between my-3">
+            <div class="op-left col-12 col-md-12 col-lg-6 py-2">
                 <h3 class="text-center mb-3">Line Name(Select Seat)</h3>
                 <div class="b-shadows bg-light rounded-2 py-2">
-                    <p class="px-2">Time: 00:00 AM/PM</p>
+                    <div class="d-flex align-items-center justify-content-between px-2">
+                        <span>Time: 00:00 AM/PM</span>
+                        <span>Line No: 0001</span>
+                    </div>
                     <p class="bg-gray m-3 p-2 text-center rounded-2"><b>Driver</b></p>
                     <div class="px-5 pb-3" id="seats"></div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-12 col-lg-6  col-xl-6 col-xxl-6 py-2">
-                <div class="infos mb-3 py-3 rounded-2">
+            <div class="col-12 col-md-12 col-lg-6 py-2">
+                <form class="infos mb-3 py-3 rounded-2" action="payment.html" method="post" enctype="multipart/form-data">
                     <h3 class="text-center pb-2">Information</h3>
 
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30 pe-1">Line Name</p>
-                        <p class="w-70">Myat Mandalar Tun</p>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Line Name</h6>
+                        <h6 class="">Myat Mandalar Tun</h6>
                     </div>
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">Route</p>
-                        <p class="w-70">Yangon -> Mandalay</p>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Route</h6>
+                        <h6 class="">Yangon -> Mandalay</h6>
                     </div>
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">Date</p>
-                        <p class="w-70">dd-mm-yy</p>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Date</h6>
+                        <h6 class="">dd-mm-yy</h6>
                     </div>
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">Time</p>
-                        <p class="w-70">Selected Time</p>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Time</h6>
+                        <h6 class="">Selected Time</h6>
                     </div>
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">Duration</p>
-                        <p class="w-70">00:00 Hours</p>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Duration</h6>
+                        <h6 class="">00:00 Hours</h6>
                     </div>
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">Price</p>
-                        <p class="w-70">20000 MMK</p>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Price</h6>
+                        <h6 class="">20000 MMK</h6>
                     </div>
-                </div>
+                </form>
 
                 <form class="p-infos py-3 rounded-2" action="payment.html" method="post" enctype="multipart/form-data">
                     <h3 class="text-center pb-2">Pessanger Information</h3>
 
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">Name</p>
-                        <input type="text" name="username" id="username" class="w-70 border-0 selecters"
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Name</h6>
+                        <input type="text" name="username" id="username" class="text-end border-0 selecters"
                                placeholder="Enter Your Name" value="" required/>
                     </div>
                     <div class="px-3">
-                        <span class="">Gender</span>
+                        <h6 class="list-group">Gender</h6>
                         <div class=" mx-3">
                             <input type="radio" name="gender" id="mgender" value="male"/> <span class="me-3">Male</span>
                             <input type="radio" name="gender" id="fgender" value="female"/> <span class="me-3">Female</span>
@@ -86,46 +92,46 @@
                         </div>
                     </div>
 
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">NRC</p>
-                        <input type="text" name="NRC" id="NRC" class="w-70 border-0 selecters"
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">NRC</h6>
+                        <input type="text" name="NRC" id="NRC" class="text-end border-0 selecters"
                                placeholder="12/PaKhaKa(N)123456" required />
                     </div>
 
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">Phone No</p>
-                        <input type="text" name="phone-no" id="phone_no" class="w-70 border-0 selecters"
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Phone No</h6>
+                        <input type="text" name="phone-no" id="phone_no" class="text-end border-0 selecters"
                                placeholder="0978948687" required />
 
                     </div>
 
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">Email</p>
-                        <input type="email" name="email" id="email" class="w-70 border-0 selecters"
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Email</h6>
+                        <input type="email" name="email" id="email" class="text-end border-0 selecters"
                                placeholder="example@gmail.com"/>
-
                     </div>
 
-
-                    <div class="d-flex align-items-center px-3">
-                        <p class="w-30">Seat No</p>
-                        <span class="" id="seat_no">00</span>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <h6 class="">Seat No</h6>
+                        <h6 class="list-group" id="seat_no">00</h6>
                     </div>
 
-                    <label class="mx-3">Payment</label>
+                   <div class="px-3">
+                       <h6 class="list-group">Payment</h6>
 
-                    <div class="payments d-flex align-items-center mx-3">
-                        <div class="d-flex align-items-center px-3">
-                            <input type="radio" name="payment" id="kpay" value="kpay" />
-                            <img src="../assents/images/payments/kpayLogo.svg" alt="Kpay Logo" class="pay-logo p-2 bg-transparent">
-                            <span class="pay-text">Kpay</span>
-                        </div>
-                        <div class="d-flex align-items-center px-3">
-                            <input type="radio" name="payment" id="wavepay" value="wavepay" />
-                            <img src="../assents/images/payments/wave_money.svg" alt="Wavepay Logo" class="pay-logo p-2 bg-transparent">
-                            <span class="pay-text">Wave Pay</span>
-                        </div>
-                    </div>
+                       <div class="payments d-flex align-items-center mx-3">
+                           <div class="d-flex align-items-center px-3">
+                               <input type="radio" name="payment" id="kpay" value="kpay" required/>
+                               <img src="../assents/images/payments/kpayLogo.svg" alt="Kpay Logo" class="pay-logo p-2 bg-transparent">
+                               <span class="pay-text">Kpay</span>
+                           </div>
+                           <div class="d-flex align-items-center px-3">
+                               <input type="radio" name="payment" id="wavepay" value="wavepay" required/>
+                               <img src="../assents/images/payments/wave_money.svg" alt="Wavepay Logo" class="pay-logo p-2 bg-transparent">
+                               <span class="pay-text">Wave Pay</span>
+                           </div>
+                       </div>
+                   </div>
 
                     <div class="mx-4 text-end">
                         <input type="submit" name="" class="btn btn-primary me-0" id="" value="Book Now"/>
@@ -142,6 +148,9 @@
     <p class="text-white-50">&copy; 2023 Travel Ticket Pick Design By TS Group</p>
 </section>
 
-<script src="../js/app.js"></script>
+<script src="../assents/libs/jquery-3.6.0.min.js"></script>
+<script src="../assents/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../js/app.js" type="text/javascript"></script>
+
 </body>
 </html>
